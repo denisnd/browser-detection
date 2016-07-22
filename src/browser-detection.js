@@ -49,6 +49,13 @@
         browser = browserParts[1];
         version = browserParts[2];
       }
+      
+      var edgeParts;
+
+      if ( edgeParts = userAgent.match(/edge\/(\w+)/) ) {
+        browser = "edge";
+        version = edgeParts[1];
+      }      
 
       if (osParts && osParts.length > 1) {
         os = osParts[1];
